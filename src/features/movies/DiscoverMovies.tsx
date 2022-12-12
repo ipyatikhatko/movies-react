@@ -112,12 +112,12 @@ const MoviesList: FunctionComponent = () => {
 
   return (
     <>
+      <SortingSelector />
       {requestedPageStatus === MoviesLoadingStatus.LOADING && (
         <LinearProgress className={classes.progress} />
       )}
       {currentPageStatus === MoviesLoadingStatus.SUCCEEDED && (
         <>
-          <SortingSelector />
           <Grid container spacing={2}>
             {movieIds.map((id) => (
               <Grid key={id} item xs={12} sm={6} md={4} lg={3}>
